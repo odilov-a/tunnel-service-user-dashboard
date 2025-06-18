@@ -31,8 +31,16 @@ const LoginPage: React.FC = () => {
       localStorage.setItem("token", token);
       alert("Login successful!");
       router.push("/dashboard");
-    } catch (err: any) {
-      setError(err?.response?.data?.message || "Login failed.");
+    } catch (err: unknown) {
+      if (axios.isAxiosError(err)) {
+        setError(
+          (err.response?.data as { message?: string })?.message ||
+            err.message ||
+            "Login failed."
+        );
+      } else {
+        setError("Login failed.");
+      }
     }
   };
 

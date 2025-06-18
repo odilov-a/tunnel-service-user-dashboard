@@ -37,8 +37,18 @@ const RegisterPage: React.FC = () => {
           password: "",
         });
       }
-    } catch (err: any) {
-      setError(err?.response?.data?.error || "Registration failed.");
+    } catch (err: unknown) {
+      if (axios.isAxiosError(err)) {
+        setError(
+          (err.response?.data as { error?: string; message?: string })?.error ||
+            (err.response?.data as { error?: string; message?: string })
+              ?.message ||
+            err.message ||
+            "Registration failed."
+        );
+      } else {
+        setError("Registration failed.");
+      }
     }
   };
 
