@@ -43,18 +43,8 @@ export default function DocsPage() {
           </code>
         </pre>
         <p className="text-sm mt-2 text-gray-500">
-          Example: <code>mytunnel -s akbar -p 3000 -t your_token_here</code>
+          Example: <code>mytunnel -s subdomain -p 3000 -t your-token-here</code>
         </p>
-      </section>
-
-      <section className="bg-white rounded shadow p-6">
-        <h2 className="text-xl font-semibold mb-2">📚 Contents</h2>
-        <ul className="list-disc list-inside text-gray-700">
-          <li>Getting Started</li>
-          <li>API Reference</li>
-          <li>FAQ</li>
-          <li>Support</li>
-        </ul>
       </section>
     </main>
   );

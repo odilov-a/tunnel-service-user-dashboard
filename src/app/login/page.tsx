@@ -26,10 +26,8 @@ const LoginPage: React.FC = () => {
           password: form.password,
         }
       );
-
       const token = res.data.data.token;
       localStorage.setItem("token", token);
-      alert("Login successful!");
       router.push("/dashboard");
     } catch (err: unknown) {
       if (axios.isAxiosError(err)) {
