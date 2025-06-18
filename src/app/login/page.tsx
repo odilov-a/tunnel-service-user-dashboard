@@ -14,7 +14,7 @@ const LoginPage: React.FC = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
 
@@ -93,7 +93,7 @@ const LoginPage: React.FC = () => {
           href="/register"
           className="block text-center mt-4 text-blue-600 hover:underline"
         >
-          Don't have an account? Register
+          Don&apos;t have an account? Register here
         </Link>
       </form>
     </div>

@@ -13,7 +13,7 @@ export default function DocsPage() {
       </Link>
       <p>
         Welcome to the Tunnel Service User Dashboard documentation page. Here
-        you'll find guides and references to help you get started.
+        you will find guides and references to help you get started.
       </p>
       <ul>
         <li>Getting Started</li>
